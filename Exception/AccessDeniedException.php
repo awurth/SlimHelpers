@@ -27,7 +27,7 @@ class AccessDeniedException extends Exception
      */
     public function __construct(ServerRequestInterface $request, ResponseInterface $response, $message = 'Access denied.')
     {
-        parent::__construct($message);
+        parent::__construct($message, 403);
 
         $this->request = $request;
         $this->response = $response;
