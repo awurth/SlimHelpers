@@ -74,7 +74,8 @@ class SentinelCreateUserCommand extends Command
         $user = $this->sentinel->registerAndActivate([
             'username' => $input->getArgument('username'),
             'email' => $input->getArgument('email'),
-            'password' => $input->getArgument('password')
+            'password' => $input->getArgument('password'),
+            'permissions' => []
         ]);
 
         $role->users()->attach($user);
