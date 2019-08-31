@@ -24,7 +24,8 @@
         "slim/csrf": "^0.8.0",
         "slim/flash": "^0.2.0",
         "symfony/console": "^3.0|^4.0",
-        "twig/twig": "^2.0"
+        "twig/twig": "^2.0",
+        "illuminate/translation": "^5.8"
     },
     "config": {
         "sort-packages": true
