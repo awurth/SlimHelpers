@@ -5,7 +5,7 @@ namespace Awurth\Slim\Helper\Twig;
 use Illuminate\Translation\Translator;
 
 
-class Translate extends \Twig_Extension implements \Twig_Extension_GlobalsInterface
+class TranslateExtension extends \Twig_Extension implements \Twig_Extension_GlobalsInterface
 {
     /**
      * @var Translator
@@ -25,8 +25,7 @@ class Translate extends \Twig_Extension implements \Twig_Extension_GlobalsInterf
     public function getFunctions()
     {
         return [
-            new \Twig_SimpleFunction('trans', [$this->translator, 'trans']),
-            new \Twig_SimpleFunction('transChoice', [$this->translator, 'transChoice']),
+            new \Twig_SimpleFunction('trans', [$this->translator, 'trans'])
         ];
     }
 
