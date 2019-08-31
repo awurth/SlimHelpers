@@ -21,6 +21,10 @@ abstract class Controller extends ContainerAwareController
         $this->container['flash']->addMessage($name, $message);
     }
 
+    protected function translate($key)
+    {
+      return $this->container['translator']->trans($key);
+    }
     /**
      * @param Response $response
      * @param string   $template
