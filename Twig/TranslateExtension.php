@@ -1,15 +1,11 @@
 <?php
-
 namespace Awurth\Slim\Helper\Twig;
 
 use Illuminate\Translation\Translator;
 
-
 class TranslateExtension extends \Twig_Extension implements \Twig_Extension_GlobalsInterface
 {
-    /**
-     * @var Translator
-     */
+
     private $translator;
 
     public function __construct(Translator $translator)
@@ -32,7 +28,9 @@ class TranslateExtension extends \Twig_Extension implements \Twig_Extension_Glob
     public function getGlobals()
     {
         return [
-            'app' => ['locale' => $this->translator->getLocale()],
+            'translator' => [
+              'locale' => $this->translator->getLocale()
+            ]
         ];
     }
 }
