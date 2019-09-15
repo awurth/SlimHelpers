@@ -22,6 +22,18 @@ abstract class Controller extends ContainerAwareController
     }
 
     /**
+     * Translate language.
+     *
+     * @param string $key
+     *
+     * @return String 
+     */
+    protected function translate($key)
+    {
+      return $this->container['translator']->trans($key);
+    }
+
+    /**
      * @param Response $response
      * @param string   $template
      * @param array    $params
